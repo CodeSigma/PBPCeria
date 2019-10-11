@@ -16,6 +16,9 @@
             <table>
                 <tr>
                     <td>nganu bos</td>
+                    <td>nganu bos</td>
+                    <td>nganu bos</td>
+                    <td>nganu bos</td>
 
                     <td><h6>Username:<h6></td>
                     <td><input class="form-control" type="text" placeholder="Masukan username" name="username" id="login-username-input" size="20"></td>
