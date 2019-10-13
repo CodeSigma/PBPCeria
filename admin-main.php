@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-xl-2 col-sm-4 wrapper">   
+        <div class="col-xl-2 col-md-2 col-sm-3 wrapper">   
             <!-- Sidebar -->
             <nav id="sidebar">
                 <div class="sidebar-header">
@@ -64,8 +64,9 @@
             </nav>
         </div>       
             
-        <div class="col-xl-10 col-sm-8 main">
-            <table name="searchByNama">
+        <div class="col-xl-10 col-md-10 col-sm-8 mainpage">
+            <div class="col-xl-12 col-md-12 col-sm-12 search">
+                <table name="searchByNama">
                     <td><h6> Cari barang</h6></td>
                     <td><input class="form-control" type="text" placeholder="Masukan nama barang" id="searchByNama-input"></td>
                     <td><button class="btn btn-primary" type="button">cari</button></td>
@@ -85,7 +86,37 @@
                     </tr>
                 
                 </table>  
-        </div>    
+        
+            </div>
+            <div class="col-xl-12 col-md-12 col-sm-12 product" style="padding: 0px;">
+                <?php
+                    require_once('database/db_login.php');
+
+                    $query = "SELECT * FROM produk";
+                    $result = mysqli_query($db,$query);
+                    if(!$result){
+                        die ("Query gagal");
+                    }
+                    echo '<table class="table table-dark">';  
+                        echo '<tr>';
+                        while($row = mysqli_fetch_array($result)){
+                                echo '<td>';
+                                    echo '<ul>';
+                                        echo '<li><img src='.'"'.$row['path'].'"'.' class="img-fluid"  alt=""></li>';
+                                        echo '<li>'.$row['id_produk'].'</li>';
+                                        echo '<li>'.$row['nama'].'</li>';
+                                        echo '<li>'.$row['warna'].'</li>';
+                                        echo '<li>'.$row['harga'].'</li>';
+                                    echo '</ul>';
+                                echo '</td>';
+                        }
+                    echo '</table>';
+                ?>
+            </div>
+        </div>
+        
+
+
     </div>  
     
        

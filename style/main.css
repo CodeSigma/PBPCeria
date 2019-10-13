@@ -1,11 +1,26 @@
 .wrapper{
     height:98vh;
 
-    background-color: blue;
+    background-color: grey;
 
 }
 
-.main{
+.mainpage{
     height:98vh;
-    background-color: #fff222;
+    background-color: black;
+    padding: 0;
+}
+
+.search{
+    height: 20%;
+    background-color: skyblue;
+
+}
+.product{
+    height: 80%;
+    background-color: green;
+}
+
+ul{
+    list-style-type: none;
 }

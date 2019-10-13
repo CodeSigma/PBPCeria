@@ -1,7 +1,0 @@
-<?php
-//File yang berisi parameter untuk login database
-$db_host = "localhost";
-$db_username = "root";
-$db_password = "";
-$db_database = "db_tas";
-?> 
