@@ -103,7 +103,7 @@
                                 echo '<td>';
                                     echo '<ul>';
                                         echo '<li><img src='.'"'.$row['path'].'"'.' class="img-fluid"  alt=""></li>';
-                                        echo '<li>'.$row['id_produk'].'</li>';
+                                        // echo '<li>'.$row['id_produk'].'</li>';
                                         echo '<li>'.$row['nama'].'</li>';
                                         echo '<li>'.$row['warna'].'</li>';
                                         echo '<li>'.$row['harga'].'</li>';
